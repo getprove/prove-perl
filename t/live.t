@@ -5,7 +5,7 @@ use Test::More;
 
 use_ok('WWW::GetProve');
 
-my $test_getprove = WWW::GetProve->new('00000000000');
+my $test_getprove = WWW::GetProve->new('test_TfcgAyFRGbdIRJHVNAxSizz2ZHp');
 
 isa_ok($test_getprove,'WWW::GetProve','getprove test object');
 
