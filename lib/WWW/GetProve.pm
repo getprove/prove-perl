@@ -175,7 +175,6 @@ sub verify {
 	my $request = $self->verify_request(@args);
 	my $response = $self->useragent->request($request);
 	die __PACKAGE__." API server says unauthorized access" if $response->code == 401;
-	use DDP; p($response->content);
 	my $data = $self->json->decode($response->content);
 	if (ref $data eq 'ARRAY') {
 		my @verifications = map {
